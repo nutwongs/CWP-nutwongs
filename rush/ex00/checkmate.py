@@ -28,7 +28,6 @@ def parse_board(board):
             return None
     return rows
 
-
 def find_king(rows):
     """Return the King's (row, col), or None unless there is exactly one."""
     king = None
@@ -39,7 +38,6 @@ def find_king(rows):
                     return None  # มี King มากกว่า 1 ตัว
                 king = (row_index, col_index)
     return king  # หากไม่เจอเลย จะ คืนค่า None (King 0 ตัว)
-
 
 def threatens(piece, step, distance):
     """Say whether a piece reached by `step` at `distance` attacks the King."""
@@ -52,7 +50,6 @@ def threatens(piece, step, distance):
     if piece == "P":
         return distance == 1 and step in PAWN_SQUARES
     return False
-
 
 def is_in_check(rows, king):
     """Walk outwards from the King along every line an enemy could arrive on."""
@@ -72,7 +69,6 @@ def is_in_check(rows, king):
             col += col_step
             distance += 1
     return False
-
 
 def checkmate(board):
     """Print Success when the King is in check, Fail when it is safe."""
