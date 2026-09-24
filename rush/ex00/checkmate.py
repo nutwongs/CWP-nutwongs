@@ -17,8 +17,7 @@ def parse_board(board):
     if not isinstance(board, str):
         return None
     
-    # ลบ \r ออกเพื่อรองรับ Windows Line Endings และตัด \n ท้ายข้อความทั้งหมด
-    board = board.replace("\r\n", "\n").strip("\n")
+  #  board = board.replace("\r\n", "\n").strip("\n")
     if not board:
         return None
 
